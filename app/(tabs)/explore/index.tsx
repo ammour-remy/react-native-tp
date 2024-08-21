@@ -5,12 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { useEffect, useState } from 'react';
 import Card from '@/components/Card';
 import { Link } from 'expo-router';
-
-export type Produit = {
-    id: string,
-    title: string,
-    thumbnail: string
-}
+import { Produit } from '@/models/Produit';
 
 export default function ExploreScreen() {
 
