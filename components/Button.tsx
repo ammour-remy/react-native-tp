@@ -1,15 +1,21 @@
 import { Pressable, StyleSheet, Text, useColorScheme } from "react-native";
 import { primary } from '@/constants/Colors';
 
-declare type Props = { title: string, width: number };
+declare type Props = {
+    title: string,
+    width: number,
+    onPress: () => void
+};
 
-export default function Button({ title, width }: Props) {
+export default function Button({ title, width, onPress }: Props) {
 
-    return <Pressable style={{
-        ...styles.button,
-        width,
-        backgroundColor: primary
-    }}>
+    return <Pressable
+        onPress={onPress}
+        style={{
+            ...styles.button,
+            width,
+            backgroundColor: primary
+        }}>
         <Text style={styles.textButton}>{title}</Text>
     </Pressable>
 }
